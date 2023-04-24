@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update user</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="update-user-container">
+        <form action="/update-user" method="POST">
+            <div>
+                <label>first_name:</label>
+                <input name="first_name" value="<%=dataUser.first_name%>" />
+            </div>
+            <div>
+                <label>last_name:</label>
+                <input name="last_name" value="<%=dataUser.last_name%>" />
+            </div>
+            <div>
+                <label>email:</label>
+                <input name="email" value="<%=dataUser.email%>" />
+            </div>
+            <div>
+                <label>address:</label>
+                <input name="address" value="<%=dataUser.address%>" />
+            </div>
+            <div>
+                <input type="text" value="<%=dataUser.id%>" hidden name="id">
+            </div>
+            <div>
+                <button class="btn-save" type="submit">Save</button>
+            </div>
+        </form>
+        <form method="POST" action="/upload-multiple-images" enctype="multipart/form-data">
+            <div>
+                <label>Select multiple images:</label>
+                <input type="file" name="multiple_images" multiple />
+            </div>
+            <div>
+                <input type="submit" name="btn_upload_multiple_images" value="Upload" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
